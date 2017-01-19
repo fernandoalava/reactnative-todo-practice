@@ -68,7 +68,7 @@ class ToDo extends Component {
         <Button title="Add" onPress={this.handlePress}/>
         {
           this.props.todos.map(task =>(
-                <Text style={(task.completed)?{textDecorationLine : 'line-through'}:{textDecorationLine:'none'}} onPress={()=>this.handleClickTask(task.id)}>{task.text}</Text>
+                <Text key={task.id} style={(task.completed)?{textDecorationLine : 'line-through'}:{textDecorationLine:'none'}} onPress={()=>this.handleClickTask(task.id)}>{task.text}</Text>
            )
           )
         }
